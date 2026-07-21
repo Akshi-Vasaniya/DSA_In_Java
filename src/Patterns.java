@@ -3,7 +3,26 @@ public class Patterns {
         int n = 5;
 
 //        pattern1(n);
-        pattern2(n);
+//        pattern2(n);
+        pattern3(n);
+    }
+
+    private static void pattern3(int n) {
+        for (int i = 0; i < n*2; i++) {
+
+            // Printing spaces
+            int statement1 = (i < n) ? n-1-i : i-n;
+            for (int j = 0; j < statement1; j++) {
+                System.out.print("  ");
+            }
+
+            int statement2 = (i < n) ? i + i + 1 : 2*(2*n - i) - 1;
+            for (int j = 0; j < statement2; j++) {
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
     }
 
     private static void pattern2(int n) {
