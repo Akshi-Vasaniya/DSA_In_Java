@@ -4,10 +4,78 @@ public class Patterns {
 
 //        pattern1(n);
 //        pattern2(n);
-        pattern3(n);
+//        pattern3(n);
+//        pattern4(n);
+        pattern5(n);
+    }
+
+    private static void pattern5(int n) {
+        /*
+                1       1
+                12     21
+                123  321
+                12344321
+         */
+        int space = (n-1)*2;
+        for (int i = 1; i < n ; i++) {
+            space -= i;
+            // Print first triangle
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+
+            // Print space
+            for (int j = space; j > 0 ; j--) {
+                System.out.print(" ");
+            }
+
+            // Print Second triangle
+            for (int j = i; j > 0 ; j--) {
+                System.out.print(j);
+            }
+
+            System.out.println();
+        }
+    }
+
+    private static void pattern4(int n) {
+        /*
+                 *
+                 * *
+                 * * *
+                 * * * *
+                 * * * * *
+                 * * * *
+                 * * *
+                 * *
+                 *
+         */
+        
+        for (int i = 1; i < n*2; i++) {
+            int stam = (i <= n)? i : n*2 - i;
+
+            for (int j = 0; j < stam; j++) {
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
     }
 
     private static void pattern3(int n) {
+        /*
+                       *
+                     * * *
+                    * * * * *
+                 * * * * * * *
+               * * * * * * * * *
+               * * * * * * * * *
+                 * * * * * * *
+                   * * * * *
+                     * * *
+                       *
+         */
+
         for (int i = 0; i < n*2; i++) {
 
             // Printing spaces
