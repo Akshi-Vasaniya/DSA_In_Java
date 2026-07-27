@@ -6,7 +6,49 @@ public class Patterns {
 //        pattern2(n);
 //        pattern3(n);
 //        pattern4(n);
-        pattern5(n);
+//        pattern5(n);
+//        pattern6(n);
+        pattern7(n);
+        
+    }
+
+    private static void pattern7(int n) {
+        int x = 0;
+        for (int i = 65; i < (65+n); i++) {
+            // Print Space
+            for (int j = 1; j < n-x; j++) {
+                System.out.print(" ");
+            }
+            x++;
+
+            // Print First Half
+            for (int j = 65; j <= i; j++) {
+                System.out.print((char)j);
+            }
+
+            // Print Second Half
+            for (int j = i-1; j >=65; j--) {
+                System.out.print((char)j);
+            }
+
+            System.out.println();
+        }
+    }
+
+    private static void pattern6(int n) {
+        /*
+                A
+                AB
+                ABC
+                ABCD
+                ABCDE
+         */
+        for (int i = 65; i <= (64+n); i++) {
+            for (int j = 65; j <= i; j++) {
+                System.out.print((char) j);
+            }
+            System.out.println();
+        }
     }
 
     private static void pattern5(int n) {
