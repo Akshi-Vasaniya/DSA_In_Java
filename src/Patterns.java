@@ -8,11 +8,55 @@ public class Patterns {
 //        pattern4(n);
 //        pattern5(n);
 //        pattern6(n);
-        pattern7(n);
+//        pattern7(n);
+        pattern8(n);
         
     }
 
+    private static void pattern8(int n) {
+        /*
+             **********
+             ****  ****
+             ***    ***
+             **      **
+             *        *
+             *        *
+             **      **
+             ***    ***
+             ****  ****
+             **********
+        * */
+        int x = 1;
+        for (int i = 0; i < (n*2); i++) {
+            // Printing first triangle
+            int stars = i < n? n-i : i-n+1;
+            for (int j = 0; j < stars; j++) {
+                System.out.print("*");
+            }
+
+            // Print Space
+            int space = (i < n) ? i+i : 2 * (2 * n - i - 1);
+            for (int j = 0; j < space; j++) {
+                System.out.print(" ");
+            }
+
+            // Print Second triangle
+//            int stm3 = i < n? n-i : i-n+2;
+            for (int j = 0; j < stars; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
     private static void pattern7(int n) {
+        /*
+                A
+               ABA
+              ABCBA
+             ABCDCBA
+            ABCDEDCBA
+        * */
         int x = 0;
         for (int i = 65; i < (65+n); i++) {
             // Print Space
