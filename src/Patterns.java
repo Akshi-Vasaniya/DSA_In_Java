@@ -9,8 +9,51 @@ public class Patterns {
 //        pattern5(n);
 //        pattern6(n);
 //        pattern7(n);
-        pattern8(n);
-        
+//        pattern8(n);
+        pattern9(n);
+
+    }
+
+    private static void pattern9(int n) {
+        /*
+        *   555555555
+            544444445
+            543333345
+            543222345
+            543212345
+            543222345
+            543333345
+            544444445
+            555555555
+        * */
+
+        int len = 2*n-1;
+
+        for (int i = 0; i < len; i++) {
+            int minDist = 0;
+
+            for (int j = 0; j < len; j++) {
+                // Calculating the min distance from all four side
+
+                // from top
+                int top = i;
+
+                // from left
+                int left = j;
+
+                // from right
+                int right = ((len-1) - j);
+
+                // from bottom
+                int bottom = ((len-1) - i);
+
+                // Get the minimum distance
+                minDist = Math.min(top, Math.min(left, Math.min(right, bottom)));
+
+                System.out.print(n-minDist);
+            }
+            System.out.println();
+        }
     }
 
     private static void pattern8(int n) {
