@@ -11,7 +11,6 @@ public class Patterns {
 //        pattern7(n);
 //        pattern8(n);
         pattern9(n);
-
     }
 
     private static void pattern9(int n) {
