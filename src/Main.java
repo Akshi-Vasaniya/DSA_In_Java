@@ -4,5 +4,6 @@ public class Main {
 //        System.out.println(n/10);
 //        StringBuilder str = new StringBuilder(String.valueOf(n));
 //        n = Integer.valueOf(str.toString())
+
     }
 }
