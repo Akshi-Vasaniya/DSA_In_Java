@@ -18,17 +18,7 @@ public class MoveZeros {
             return;
         }
 
-        /*for (int i = 1; i < len; i++) {
-            for (int j = i; j > 0; j--) {
-                if (nums[j-1] == 0) {
-                    int temp = nums[j-1];
-                    nums[j-1] = nums[j];
-                    nums[j] = temp;
-                }
-            }
-        }*/
-
-        // Two pointer
+       /* // Two pointer
         int a = 0; // keep the track of zero
         int b = 1; // keep the track of non-zero
 
@@ -51,7 +41,24 @@ public class MoveZeros {
                 b++;
             }
         }
+*/
 
+        int i = 0; // Track of zero
+        int j = 1; // Track of non-zero
+        while (j < nums.length) {
+            if (nums[i] == 0 && nums[j] != 0) {
+                int temp = nums[i];
+                nums[i] = nums[j];
+                nums[j] = temp;
+                i++;
+                j++;
+            } else if (nums[i] != 0) {
+                i++;
+                j++;
+            } else {
+                j++;
+            }
+        }
         System.out.println(Arrays.toString(nums));
     }
 }
